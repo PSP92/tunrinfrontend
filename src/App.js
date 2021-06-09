@@ -14,13 +14,15 @@ function App(props) {
     margin: "10px -10px 10px 10px",
     fontFamily: "Oswald, sans-serif ",
     color:"black",
-    fontWeight:"bold"
+    fontWeight:"700",
+    textShadow:"2px 2px gray"
   };
   const h4 ={
     textAlign:"right",
     fontFamily: "Nixie One",
     color:"black",
-    
+    borderBottom:"4px solid #A93E55"
+
   }
   const button = {
     backgroundColor: "#A93E55",
