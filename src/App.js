@@ -9,6 +9,7 @@ function App(props) {
   /////////////////
   // Style Objects
   /////////////////
+  
   const header = {
     textAlign: "",
     margin: "6px 21px 12px 6px",

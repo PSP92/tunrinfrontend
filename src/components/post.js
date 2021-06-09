@@ -9,26 +9,26 @@ const Post = ({post}) => {
     const div = {
         textAlign: "right",
         // color:"black",
-        // border: "3px solid",
+        border: "1px solid",
         margin: "10px auto",
         width: "80%",
         fontFamily: "Oswald, sans-serif ",
-
-    
+        fontWeight:"bold",
     }
     const justone={
-        color:"black",
+         color:"black",
+        padding:"5px 5px 5px 5px",
         // fontFamily: "Oswald, sans-serif ",
+        fontWeight:"bold",
     }
     const newstyle ={
-        color:"#4f9aa8",
+        color:"#547AA5",
         textAlign:"left",
-        // fontFamily: "Oswald, sans-serif ",
     }
 
   return <div style={div}>
       <Link to={`/post/${post.id}`}>
-          <h3 style ={justone}>{post.artist}</h3>
+          <h4 style ={justone}>{post.artist}</h4>
       </Link>
       <div style={newstyle}>
       <h4>{post.title}</h4>
