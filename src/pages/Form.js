@@ -21,30 +21,34 @@ const Form = ({ initialTunein, handleSubmit, buttonLabel, history }) => {
     handleSubmit(formData);
     history.push("/");
   };
+
+  const songs ={
+    backgroundColor:"#A93E55",
+  }
   return (
     <form onSubmit={handleSubmission}>
       <input
+        placeholder="Title"
         type="text"
         onChange={handleChange}
         value={formData.title}
         name="title"
       />
-      <p>Title</p>
        <input
+       placeholder="Artist"
         type="text"
         onChange={handleChange}
         value={formData.artist}
         name="artist"
       />
-      <p>Artist</p>
       <input
+        placeholder="Time"
         type="text"
         onChange={handleChange}
         value={formData.time}
         name="time"
       />
-      <p>Time</p>
-      <input type="submit" value={buttonLabel} />
+      <input style ={songs} type="submit" value={buttonLabel} />
     </form>
   );
 };

@@ -10,19 +10,27 @@ function App(props) {
   // Style Objects
   /////////////////
   const header = {
-    textAlign: "left",
-    margin: "10px -10px 10px 10px",
+    textAlign: "",
+    margin: "6px 21px 12px 6px",
     fontFamily: "Oswald, sans-serif ",
     color:"black",
-    fontWeight:"700",
-    textShadow:"2px 2px gray"
+    fontWeight:"bold",
+    textShadow:"2px 2px gray",
+    width:"80%"
+ 
   };
   const h4 ={
     textAlign:"right",
     fontFamily: "Nixie One",
     color:"black",
-    borderBottom:"4px solid #A93E55"
+    borderBottom:"4px solid #A93E55",
+    // width:"80%"
 
+  }
+  const playlists = {
+    color:"black",
+    fontWeight:"bold",
+    fontFamily: "Oswald, sans-serif ",
   }
   const button = {
     backgroundColor: "#A93E55",
@@ -94,7 +102,8 @@ function App(props) {
 
   return (
     <div className="App">
-      <h1 style={header}>TUNR.</h1><h4 style={h4}>For all your playlist needs</h4>
+      <h1 style={header}>TUNR.</h1><p style={h4}>FOR ALL YOUR PLAYLIST NEEDS</p>
+      <h2 style={playlists}>PLAYLIST 1</h2>
       <Link to="/new"><button style={button}>New Song</button></Link>
       <Switch>
         <Route

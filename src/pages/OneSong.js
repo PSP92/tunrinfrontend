@@ -10,19 +10,29 @@ const OneSong = ({posts, match, edit,deleteTunein}) => {
     //////////////////////////
     const div = {
         textAlign: "center",
-        border: "3px solid green",
+        Color:"black",
+        border: "3px solid #A93E55",
         width: "80%",
-        margin: "30px auto"
+        margin: "30px auto",
+        backgroundColor:"white",
+        fontFamily: "Oswald, sans-serif ",
+    }
+    const makeSong= {
+        backgroundColor:"#A93E55",
+        border:"2px solid #A93E55"
+    }
+    const titles ={
+        color:"#4f9aa8", 
     }
   return post ?  <div style={div}>
       {/* when refresh the page */}
-      <h1>{post.title}</h1>
+      <h1 style={titles}>{post.title}</h1>
       <h2>{post.artist}</h2>
       <h2>{post.time}</h2>
-      <button onClick={() => edit(post)}>Edit</button>
-      <button onClick={() => deleteTunein(post)}>Delete</button>
+      <button style ={makeSong} onClick={() => edit(post)}>Edit</button>
+      <button style = {makeSong} onClick={() => deleteTunein(post)}>Delete</button>
       <Link to="/">
-          <button>Go Back</button>
+          <button style = {makeSong}>Go Back</button>
       </Link>
   </div> : null  
 //   :null after refreshing return the same page
