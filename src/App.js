@@ -29,8 +29,11 @@ function App(props) {
   }
   const playlists = {
     color:"black",
+    margin: "10px auto",
     fontWeight:"bold",
     fontFamily: "Oswald, sans-serif ",
+  
+
   }
   const button = {
     backgroundColor: "#A93E55",
