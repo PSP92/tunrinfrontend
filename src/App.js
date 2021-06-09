@@ -9,15 +9,24 @@ function App(props) {
   /////////////////
   // Style Objects
   /////////////////
-  const h1 = {
-    textAlign: "center",
-    margin: "10px"
+  const header = {
+    textAlign: "left",
+    margin: "10px -10px 10px 10px",
+    fontFamily: "Oswald, sans-serif ",
+    color:"black",
+    fontWeight:"bold"
   };
-
+  const h4 ={
+    textAlign:"right",
+    fontFamily: "Nixie One",
+    color:"black",
+    
+  }
   const button = {
-    backgroundColor: "navy",
+    backgroundColor: "#A93E55",
     display: "block",
-    margin: "auto"
+    margin: "auto",
+    borderRadius:"5px"
   }
   /////////////////////
   // State & Other Variables
@@ -80,17 +89,19 @@ function App(props) {
   /////////////////
   useEffect(() => {getTuneins()}, [])
 
-  
+
   return (
     <div className="App">
-      <h1 style={h1}>Play List</h1>
+      <h1 style={header}>TUNR.</h1><h4 style={h4}>For all your playlist needs</h4>
       <Link to="/new"><button style={button}>New Song</button></Link>
       <Switch>
         <Route
           exact
           path="/"
           render={(rp) => <AllSongs {...rp} posts={posts} />}
+         
         />
+        
           <Route
           path="/post/:id"
           render={(rp) => <OneSong 
